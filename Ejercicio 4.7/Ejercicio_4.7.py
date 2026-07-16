@@ -2,46 +2,32 @@ from abc import ABC, abstractmethod
 from typing import List
 
 class Animal(ABC):
-	"""
-	Clase abstracta raíz que modela un animal genérico.
-	"""
 	@abstractmethod
 	def get_scientific_name(self) -> str:
-		"""Obtiene el nombre científico del animal."""
 		pass
 
 	@abstractmethod
 	def get_sound(self) -> str:
-		"""Obtiene el sonido producido por el animal."""
 		pass
 
 	@abstractmethod
 	def get_food(self) -> str:
-		"""Obtiene el alimento que consume el animal."""
 		pass
 
 	@abstractmethod
 	def get_habitat(self) -> str:
-		"""Obtiene el hábitat del animal."""
 		pass
 
 
 class Canid(Animal, ABC):
-	"""
-	Subclase abstracta que representa a la familia de los cánidos.
-	"""
 	pass
 
 
 class Feline(Animal, ABC):
-	"""
-	Subclase abstracta que representa a la familia de los felinos.
-	"""
 	pass
 
 
 class Dog(Canid):
-	"""Subclase concreta de Canid."""
 	def get_sound(self) -> str:
 		return "Ladrido"
 
@@ -56,7 +42,6 @@ class Dog(Canid):
 
 
 class Wolf(Canid):
-	"""Subclase concreta de Canid."""
 	def get_sound(self) -> str:
 		return "Aullido"
 
@@ -71,7 +56,6 @@ class Wolf(Canid):
 
 
 class Lion(Feline):
-	"""Subclase concreta de Feline."""
 	def get_sound(self) -> str:
 		return "Rugido"
 
@@ -86,7 +70,6 @@ class Lion(Feline):
 
 
 class Cat(Feline):
-	"""Subclase concreta de Feline."""
 	def get_sound(self) -> str:
 		return "Maullido"
 

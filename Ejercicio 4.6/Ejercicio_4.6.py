@@ -1,27 +1,18 @@
 # Ejercicio 4.6: Métodos Polimórficos
 
 class Teacher:
-    """
-    Superclase que representa a un profesor genérico.
-    """
     def print_details(self):
-        """Método común para identificar al objeto."""
         print("Es un profesor.")
 
 
 class TenuredTeacher(Teacher):
-    """
-    Subclase que representa a un profesor titular.
-    """
     def __init__(self, years: int = 0):
         self.years = years
 
     def print_details(self):
-        """Sobrescribe el método de la clase padre."""
         print("Es un profesor titular.")
 
     def print_years(self):
-        """Método exclusivo de la clase hija."""
         print(f"Años = {self.years}")
 
 if __name__ == "__main__":
